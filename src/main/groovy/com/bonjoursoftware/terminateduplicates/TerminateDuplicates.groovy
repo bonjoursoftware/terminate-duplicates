@@ -1,8 +1,11 @@
 /**
  * Terminate Duplicates - Groovy Spock Gradle CLI app that finds and deletes duplicate files
+ *
  * https://github.com/bonjoursoftware/terminate-duplicates
  *
- * Copyright (C) 2019 Bonjour Software Limited | https://bonjoursoftware.com/
+ * Copyright (C) 2019 Bonjour Software Limited
+ *
+ * https://bonjoursoftware.com/
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +18,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see
+ * along with this program. If not, see
  * https://github.com/bonjoursoftware/terminate-duplicates/blob/master/LICENSE
  */
 package com.bonjoursoftware.terminateduplicates
