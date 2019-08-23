@@ -23,12 +23,23 @@
  */
 package com.bonjoursoftware.terminateduplicates
 
-import groovy.util.logging.Log
+import groovy.cli.picocli.CliBuilder
+import groovy.util.logging.Slf4j
 
-@Log
+@Slf4j
 class TerminateDuplicates {
 
     static void main(String[] args) {
-        log.warning 'Does nothing yet...'
+        def cli = new CliBuilder(name: 'terminate-duplicates')
+        cli.d(longOpt: 'directory', args: 1, argName: 'dir', type: File, defaultValue: '.', 'directory where duplicate files are searched')
+        cli.r(longOpt: 'remove', type: Boolean, defaultValue: false, 'remove duplicate files')
+        cli.e(longOpt: 'export', type: Boolean, defaultValue: false, 'export duplicate files list to CSV file')
+        cli.h(longOpt: 'help', type: Boolean, defaultValue: false, 'print this message')
+        cli.usage()
+        def options = cli.parse(args)
+        log.info "Directory is ${options.directory}"
+        log.info "Remove is ${options.remove}"
+        log.info "Export is ${options.export}"
+        log.info "Arguments are ${options.arguments()}"
     }
 }
