@@ -2,7 +2,7 @@
 
 ## Terminate Duplicates
 
-[![Docker Build](https://img.shields.io/docker/cloud/build/bonjoursoftware/terminate-duplicates.svg)](https://hub.docker.com/r/bonjoursoftware/terminate-duplicates)
+[![Docker Build](https://img.shields.io/docker/cloud/build/bonjoursoftware/terminate-duplicates.svg)](https://hub.docker.com/r/bonjoursoftware/terminate-duplicates/builds)
 
 This project demonstrates:
 - how to develop a CLI (command-line interface) application with Groovy, Spock and Gradle
