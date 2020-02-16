@@ -1,0 +1,12 @@
+FROM arm32v7/gradle:jdk11 AS builder
+WORKDIR /home/gradle/project
+COPY settings.gradle ./
+COPY build.gradle ./
+RUN gradle build --no-daemon --info --gradle-user-home ./
+COPY src/ ./src/
+RUN gradle jar --no-daemon --offline --info --gradle-user-home ./
+
+FROM arm32v7/openjdk:11-jre-slim
+WORKDIR /home/app/
+COPY --from=builder /home/gradle/project/build/libs/*.jar ./app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
